@@ -2,10 +2,6 @@
 
 one:
   name: MyString
-  instructions: MyText
-  est_time: 1
 
 two:
   name: MyString
-  instructions: MyText
-  est_time: 1

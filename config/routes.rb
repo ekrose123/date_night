@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  resources :recipes
+  resources :ingredients
+
   root 'welcome#index'
+
+  get 'new' => 'ingredient#new'
 
   get 'welcome/about'
 
