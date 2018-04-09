@@ -11,12 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :ingredient_name %>
+<form>
+  <div class="form-group">
+    <%= form.text_field :name, id: :ingredient_name, class:'form-control', placeholder:'Enter an ingredient...' %>
   </div>
+  <button type="submit" class="btn btn-success">Add</button>
+</form>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

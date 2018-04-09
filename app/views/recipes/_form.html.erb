@@ -11,22 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :recipe_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :instructions %>
-    <%= form.text_area :instructions, id: :recipe_instructions %>
-  </div>
-
-  <div class="field">
-    <%= form.label :est_time %>
-    <%= form.number_field :est_time, id: :recipe_est_time %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <form>
+    <div class="form-group">
+      <%= form.text_field :name, id: :recipe_name, class:'form-control', placeholder:'Enter name of recipe...' %>
+    </div>
+    <div class="form-group">
+      <%= form.text_area :instructions, id: :recipe_instructions, class:'form-control', placeholder:'Tell me how you make that again...'%>
+    </div>
+    <div class="form-group">
+      <%= form.number_field :est_time, id: :recipe_est_time, class:'form-control', placeholder: 'How long does this dish take to make?'%>
+    </div>
+    <button type="submit" class="btn btn-success">Add Recipe</button>
+  </form>
 <% end %>
