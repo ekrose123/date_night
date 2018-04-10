@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'devise'
 gem 'cancancan'
+gem 'cocoon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

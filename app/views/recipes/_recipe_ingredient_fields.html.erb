@@ -1,0 +1,6 @@
+<div class="nested-fields form-group">
+	<%= f.fields_for :ingredient do |ingredient_form| %>
+	<%= ingredient_form.text_field :name %>
+	<% end %>
+</div>
+

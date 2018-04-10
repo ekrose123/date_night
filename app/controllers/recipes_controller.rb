@@ -24,6 +24,7 @@ class RecipesController < ApplicationController
   # POST /recipes
   # POST /recipes.json
   def create
+    byebug
     @recipe = Recipe.new(recipe_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :instructions, :est_time)
+      params.require(:recipe).permit(:name, :instructions, :est_time, recipe_ingredients_attributes: [ :id, :ingredient_id, :_destroy, ingredient_attributes: [:name] ])
     end
 end
