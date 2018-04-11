@@ -1,6 +1,7 @@
 <div class="nested-fields form-group">
 	<%= f.fields_for :ingredient do |ingredient_form| %>
-	<%= ingredient_form.text_field :name %>
+		<%= ingredient_form.text_field :name %>
+		<%= link_to_remove_association f, class: 'fas fa-trash' %>
 	<% end %>
 </div>
 

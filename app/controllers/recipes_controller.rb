@@ -24,7 +24,6 @@ class RecipesController < ApplicationController
   # POST /recipes
   # POST /recipes.json
   def create
-    byebug
     @recipe = Recipe.new(recipe_params)
 
     respond_to do |format|
