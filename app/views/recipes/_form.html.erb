@@ -22,14 +22,14 @@
   </div>
   <div class="form-group">
     <h4>Ingredients</h4>
-    <%= form.fields_for :recipe_ingredients do |ingredient| %>
-    <%= render 'recipe_ingredient_fields', f: ingredient %>
+    <%= form.fields_for :ingredients do |ingredient| %>
+      <%= render 'ingredient_fields', f: ingredient %>
     <% end %>
-  </div>
-  <div class=links>
-    <%= link_to_add_association form, :recipe_ingredients, class:'btn btn-primary' do %>
-      Add Ingredient
-    <% end %>
+    <div class="links">
+      <%= link_to_add_association form, :ingredients, class: 'btn btn-primary' do %>
+        Add Ingredient
+      <% end %>
+    </div>
   </div>
   <%= form.submit %>
 <% end %>
