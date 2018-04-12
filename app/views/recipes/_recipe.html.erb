@@ -1,0 +1,26 @@
+<div class = "card">
+  <div class="card-body">
+    <div class="card-header">
+      <p><strong><%= link_to rec.name, rec %></strong></p>
+    </div>
+    <div class="card-text">
+      <h4><strong>Instructions:</strong></h4>
+      <p><%= rec.instructions %></p>
+      <h4>Ingredients</h4>
+      <p>
+        <% rec.ingredients.each do |ing| %>
+        <%= link_to ing.name, ing %> 
+        <% end %>
+      </p>
+      <h6>Est: time:</h6> <p><%= rec.est_time %> mins</p>
+    </div>
+    <div class="card-footer">
+      <table>
+        <tr>
+          <td><%= link_to ' ', edit_recipe_path(rec), class: 'far fa-edit' %></td>
+          <td><%= link_to ' ', rec, class: 'fas fa-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

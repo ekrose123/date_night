@@ -1,19 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
-</p>
+<!-- Build Card or jumbotron for recipe with side bar -->
 
-<p>
-  <strong>Instructions:</strong>
-  <%= @recipe.instructions %>
-</p>
+<div class="row">
+	<div class="col-lg-9">
+		<div class="card border-dark mb-3">
+			<div class="card-header">
+				<h2><%= @recipe.name %><div class="far fa-clock"></div><%= @recipe.est_time %> mins</h2>
+			</div>
+			<div class="card-body">
+				<h3>Instructions</h3>
+				<p><%= @recipe.instructions %></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="card">
+			<div class="card-header">
+				Ingredients
+			</div>
+			<div class="card-body">
+				<% @recipe.ingredients.each do |ing| %>
+					<table>
+						<tr>
+							<td><%= link_to ing.name%></td>
+						</tr>
+					</table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Est time:</strong>
-  <%= @recipe.est_time %>
-</p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+
+<%= link_to ' ', recipes_path, class:'fas fa-angle-double-left fa-3x' %>

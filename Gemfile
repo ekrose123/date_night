@@ -31,6 +31,8 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'devise'
 gem 'cancancan'
 gem 'cocoon'
+gem 'carrierwave', '~> 1.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

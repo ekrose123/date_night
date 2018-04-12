@@ -5,26 +5,7 @@
 <div class="row">
   <% @recipes.each do |recipe| %>
     <div class="col-sm-4">
-      <div class = "card">
-        <div class="card-body">
-          <div class="card-header">
-            <p><strong><%= link_to recipe.name %></strong></p>
-          </div>
-          <div class="card-text">
-            <h4><strong>Instructions:</strong></h4>
-            <p><%= recipe.instructions %></p>
-            <h6>Est: time:</h6> <p><%= recipe.est_time %> mins</p>
-          </div>
-          <div class="card-footer">
-            <table>
-              <tr>
-                <td><%= link_to ' ', edit_recipe_path(recipe), class: 'far fa-edit' %></td>
-                <td><%= link_to ' ', recipe, class: 'fas fa-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
+      <%= render 'recipe', rec: recipe %>
     </div>
   <% end %>
 </div>

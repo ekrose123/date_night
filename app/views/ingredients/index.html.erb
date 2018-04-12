@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ingredients</h1>
+<h1>Ingredients <%= link_to ' ', new_ingredient_path, class:'fas fa-plus' %></h1>
 
 <div class="row">
   <% @ingredients.each do |ingredient| %>
@@ -15,4 +15,4 @@
 </div>
 <br>
 
-<%= link_to 'New Ingredient', new_ingredient_path %>
+

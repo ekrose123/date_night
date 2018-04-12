@@ -26,10 +26,9 @@
       <%= render 'ingredient_fields', f: ingredient %>
     <% end %>
     <div class="links">
-      <%= link_to_add_association form, :ingredients, class: 'btn btn-primary' do %>
-        Add Ingredient
+      <%= link_to_add_association form, :ingredients, class: 'fas fa-plus' do %>
       <% end %>
     </div>
   </div>
-  <%= form.submit %>
+  <%= form.submit class:'btn btn-success' %>
 <% end %>
